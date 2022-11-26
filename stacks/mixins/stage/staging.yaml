@@ -1,0 +1,5 @@
+vars:
+  stage: staging
+  instance_type: c6.large
+  volume_size: 150
+  volume_type: standard

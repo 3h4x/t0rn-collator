@@ -1,0 +1,6 @@
+import:
+  - mixins/region/eu-central-1
+  - orgs/t3rn/t0rn/dev/_defaults
+  - catalog/terraform/t0rn-ec1-dev
+  - catalog/terraform/vpc
+  - catalog/terraform/t0rn-collator

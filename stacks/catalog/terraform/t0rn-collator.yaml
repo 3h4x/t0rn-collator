@@ -1,0 +1,7 @@
+components:
+  terraform:
+    "t0rn-collator":
+      vars:
+        enabled: true
+        collator_name: 3h4x-ec1
+        collator_image: 3h4xx/t0rn-collator:v1.2.0-rc.4

@@ -1,0 +1,12 @@
+vars:
+  region: eu-central-1
+  environment: ec1
+
+components:
+  terraform:
+    vpc:
+      vars:
+        availability_zones:
+          - eu-central-1a
+          - eu-central-1b
+          - eu-central-1c

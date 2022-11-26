@@ -1,0 +1,5 @@
+vars:
+  stage: prod
+  instance_type: c6.2xlarge
+  volume_size: 250
+  volume_type: standard

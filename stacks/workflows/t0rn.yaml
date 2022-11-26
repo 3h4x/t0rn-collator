@@ -1,0 +1,40 @@
+workflows:
+
+  apply:
+    description: Run 'terraform apply' on all components in the 't0rn-ec1-dev' stack
+    # The workflow `stack` attribute overrides any stack in the `command` (if specified)
+    # The step `stack` attribute overrides any stack in the `command` (if specified) and the workflow `stack` attribute
+    stack: t0rn-ec1-dev
+    steps:
+      - command: echo Provisioning t0rn collator on EC2
+        type: shell
+      - command: terraform apply infra/vpc
+      - command: terraform apply t0rn-collator
+      - command: echo Completed
+        type: shell
+
+  plan:
+    description: Run 'terraform plan' on all components in the 't0rn-ec1-dev' stack
+    # The workflow `stack` attribute overrides any stack in the `command` (if specified)
+    # The step `stack` attribute overrides any stack in the `command` (if specified) and the workflow `stack` attribute
+    stack: t0rn-ec1-dev
+    steps:
+      - command: echo Provisioning t0rn collator on EC2
+        type: shell
+      - command: terraform plan infra/vpc
+      - command: terraform plan t0rn-collator
+      - command: echo Completed
+        type: shell
+
+  destroy:
+    description: Run 'terraform destroy' on all components in the 't0rn-ec1-dev' stack
+    # The workflow `stack` attribute overrides any stack in the `command` (if specified)
+    # The step `stack` attribute overrides any stack in the `command` (if specified) and the workflow `stack` attribute
+    stack: t0rn-ec1-dev
+    steps:
+      - command: echo Destroying t0rn-collator infrastructure
+        type: shell
+      - command: terraform destroy t0rn-collator
+      - command: terraform destroy infra/vpc
+      - command: echo Completed
+        type: shell

@@ -1,0 +1,5 @@
+vars:
+  stage: dev
+  instance_type: t3a.medium
+  volume_size: 100
+  volume_type: standard

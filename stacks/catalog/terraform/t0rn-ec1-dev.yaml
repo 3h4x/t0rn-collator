@@ -1,0 +1,8 @@
+components:
+  terraform:
+    "infra/vpc":
+      vars:
+        cidr_block: 10.10.0.0/18
+    "t0rn-collator":
+      vars:
+        name: t0rn-collator

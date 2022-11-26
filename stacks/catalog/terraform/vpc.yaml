@@ -1,0 +1,10 @@
+components:
+  terraform:
+    "infra/vpc":
+      vars:
+        enabled: true
+        name: "common"
+        subnet_type_tag_key: t3rn.io/subnet/type
+        nat_gateway_enabled: true
+        nat_instance_enabled: false
+        max_subnet_count: 1

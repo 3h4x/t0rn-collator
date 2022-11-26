@@ -1,0 +1,12 @@
+vars:
+  namespace: t3rn
+
+terraform:
+  vars: {}
+
+helmfile:
+  vars: {}
+
+components:
+  terraform: {}
+  helmfile: {}
