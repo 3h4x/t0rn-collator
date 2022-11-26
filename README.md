@@ -1,5 +1,14 @@
 # t0rn Collator Infrastructure
 
+## Architecture
+
+Key components:
+- VPC with private and public subnet
+- `t0rn-collator` in private subnet and NatGW in public
+- ASG with min, max instances set to 1 for `t0rn-collator`
+- Configuration with `userdata`
+
+
 ## Atmos was used to provide a DRY solution
 The [`atmos`](https://github.com/cloudposse/atmos) CLI is a universal tool for DevOps and cloud automation. It allows
 deploying and destroying Terraform and helmfile components, as well as running workflows to bootstrap or teardown all
