@@ -24,19 +24,19 @@ For more options go to [docs](https://atmos.tools/quick-start/install)
 
 ### Basic Architecture
 
-- [components provide generic modules that can be used in stacks](./components/terraform/)
-- [stacks provision certain functionality](./stacks/catalog/terraform/)
-- [workflow can arrange stacks and deploy application that consists of multiple stacks or even whole infrastructure](./stacks/workflows/)
+- [`components` provide generic modules that can be used in stacks](./components/terraform/)
+- [`stacks` provision certain functionality](./stacks/catalog/terraform/)
+- [`workflows` can arrange stacks and deploy application that consists of multiple stacks or even whole infrastructure](./stacks/workflows/)
 
 _Note: [More documentation](https://atmos.tools)_
 
 ## TLDR Bootstrapping infrastructure
 
-Workflow `t0rn.yaml` will provision two components that are base of this work, vpn and t0rn-collator.
+Workflow `t0rn.yaml` will provision two components that are essentials of this work, `vpn` and `t0rn-collator`.
 
 `atmos workflow -f t0rn.yaml plan`
 
-If plan looks good (obviously planning t0rn-collator will fail without VPC) then:
+If plan looks good (obviously planning `t0rn-collator` will fail without VPC) then:
 
 `atmos workflow -f t0rn.yaml apply`
 
